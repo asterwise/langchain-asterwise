@@ -7,7 +7,7 @@ LangChain tools for the [Asterwise](https://asterwise.com) astrology API. Five `
 | `asterwise_natal_chart` | Vedic natal chart: planets by sign, degree, nakshatra and house; ascendant; Moon sign |
 | `asterwise_western_natal_chart` | Western natal chart: planets, ascendant, midheaven; Placidus, Koch, Equal or Whole Sign |
 | `asterwise_matchmaking` | Ashtakoot Guna Milan out of 36 with Rajju and Vedha as separate vetoes, Mangal dosha comparison, narrative |
-| `asterwise_panchanga` | Tithi, nakshatra, yoga, karana, vara, sunrise and sunset, Rahu kaal for a date and place |
+| `asterwise_panchanga` | Tithi, nakshatra, yoga, karana and vara (weekday) for a date and place |
 | `asterwise_numerology_profile` | Life path, expression, soul urge, personality and related numbers |
 
 Outputs are slimmed by default to the fields a model needs to reason with. Pass `slim=False` for the full API payload. Birthplaces are plain text; the API geocodes them.

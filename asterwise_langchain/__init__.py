@@ -109,7 +109,8 @@ def _slim_match(d: dict[str, Any]) -> dict[str, Any]:
 
 
 def _slim_panchanga(d: dict[str, Any]) -> dict[str, Any]:
-    keep = {k: d[k] for k in ("date", "vara", "tithi", "nakshatra", "yoga", "karana", "sunrise", "sunset", "moonrise", "moonset", "rahu_kaal", "location") if k in d}
+    # The daily panchanga endpoint returns exactly these five objects, each with a name field.
+    keep = {k: d[k] for k in ("tithi", "vara", "nakshatra", "yoga", "karana") if k in d}
     return keep or d
 
 
@@ -190,7 +191,7 @@ class AsterwiseToolkit:
             ),
             StructuredTool.from_function(
                 func=wrap(self.panchanga), name="asterwise_panchanga", args_schema=PanchangaArgs,
-                description="Daily panchanga for a date and place: tithi, nakshatra, yoga, karana, vara, sunrise and sunset, Rahu kaal.",
+                description="Daily panchanga for a date and place: tithi, nakshatra, yoga, karana and vara (weekday), each with a name field.",
             ),
             StructuredTool.from_function(
                 func=wrap(self.numerology_profile), name="asterwise_numerology_profile", args_schema=NumerologyArgs,
