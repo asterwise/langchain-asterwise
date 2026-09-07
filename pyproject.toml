@@ -17,7 +17,7 @@ dependencies = ["langchain-core>=0.3", "asterwise>=0.2.3", "pydantic>=2"]
 test = ["pytest>=7"]
 
 [project.urls]
-Homepage = "https://asterwise.com"
+Homepage = "https://asterwise.com/?utm_source=pypi&utm_medium=package&utm_campaign=langchain-asterwise"
 Documentation = "https://docs.asterwise.com"
 Accuracy = "https://asterwise.com/accuracy/"
 
